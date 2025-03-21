@@ -16,7 +16,7 @@ include "header.php";
                 echo '<p class="card-text">' . htmlspecialchars($row['category']) . '</p>';
                 echo '<p class="card-text">' . substr(htmlspecialchars($row['content']), 0, 200) .'...</p>';
                 echo '<a href="#" class="btn btn-primary">Read More</a>';
-                echo "<form action='delete_post.php' method='post' class='d-inline-block ml-2'>";
+                echo "<form action='move_to_trash.php' method='post' class='d-inline-block ml-2'>";
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '" />';
                 echo "<button type='submit' class='btn btn-danger btn-sm'>Delete</button>";
                 echo "</form>";

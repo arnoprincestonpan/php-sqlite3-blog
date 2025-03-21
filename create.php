@@ -27,4 +27,18 @@ include "header.php";
             <button>Submit</button>
         </form>
     </div>
+    <script src="https://cdn.tiny.cloud/1/your-tinymce-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        document.getElementById('content_type').addEventListener('change', () => {
+            if(this.value === 'markdown'){
+                tinymce.remove('#content');
+            } else {
+                tinymce.init({
+                    selector: "#content",
+                    plugins: 'autolink lists link image charmap print preview anchor',
+                    toolbar: 'undo redo | formatselect | bold italic | alginleft aligncenter alignright | bullist numlist outdent indent | link image',
+                });
+            }
+        });
+    </script>
 <?php include "footer.php"; ?>

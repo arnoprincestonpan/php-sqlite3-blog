@@ -16,7 +16,7 @@ include "header.php";
             <div class="form-group">
                 <label for="content_type">Content Type</label>
                 <select class="form-control" id="content_type" name="content_type">
-                    <option value="rich">Rich Text</option>
+                    <option value="text">Text</option>
                     <option value="markdown">Markdown</option>
                 </select>
             </div>
@@ -29,16 +29,12 @@ include "header.php";
     </div>
     <script src="https://cdn.tiny.cloud/1/your-tinymce-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
-        document.getElementById('content_type').addEventListener('change', () => {
+       document.getElementById('content_type').addEventListener('change', () => {
             if(this.value === 'markdown'){
-                tinymce.remove('#content');
+                // Markdown Selected
             } else {
-                tinymce.init({
-                    selector: "#content",
-                    plugins: 'autolink lists link image charmap print preview anchor',
-                    toolbar: 'undo redo | formatselect | bold italic | alginleft aligncenter alignright | bullist numlist outdent indent | link image',
-                });
+                // Text Edtior
             }
-        });
+       });
     </script>
 <?php include "footer.php"; ?>

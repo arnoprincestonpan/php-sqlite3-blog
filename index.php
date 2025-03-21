@@ -1,5 +1,5 @@
 <?php 
-$pageTitle = "My Simple Blog : Home";
+$pageTitle = "Home";
 include "header.php"; 
 ?>
     <div class="container mt-4">
@@ -16,6 +16,10 @@ include "header.php";
                 echo '<p class="card-text">' . htmlspecialchars($row['category']) . '</p>';
                 echo '<p class="card-text">' . substr(htmlspecialchars($row['content']), 0, 200) .'</p>';
                 echo '<a href="#" class="btn btn-primary">Read More</a>';
+                echo "<form>";
+                echo "<input/>";
+                echo "<button></button>";
+                echo "<form>";
                 echo '</div>';
                 echo '</div>';
             }

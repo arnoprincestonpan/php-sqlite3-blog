@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <?php include 'navbar.php' ?>
     <div>
-        
+
     </div>
     <script src="/script.js"></script>
 </body>

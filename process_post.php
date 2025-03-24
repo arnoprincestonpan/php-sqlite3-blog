@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindValue(':title', $title, SQLITE3_TEXT);
         $stmt->bindValue(':content', $content, SQLITE3_TEXT);
         $stmt->bindValue(':content_type', $content_type, SQLITE3_TEXT);
-        $stmt->bindValue(':category', $category, $SQLITE3_TEXT);
+        $stmt->bindValue(':category', $category, SQLITE3_TEXT);
         $stmt->execute();
         $db->close();
         header('Location: index.php');
